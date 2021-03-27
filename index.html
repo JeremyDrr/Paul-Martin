@@ -12,6 +12,9 @@
     <!-- Feuille CSS personnalisée -->
     <link href="assets/css/customCSS.css" rel="stylesheet">
 
+    <!-- Feuille JS personnalisée -->
+    <script type="text/javascript" src="assets/js/customJS.js"></script>
+
 </head>
 <body>
     <section id="formulaire">
@@ -24,7 +27,7 @@
                 </div>
             </div>
             <div class="container">   
-                <form class="form-group main-contact-form col-md-12" action="mailto:morad.ichchou@gmail.com?subject=Demande écusson" method="POST" enctype="multipart/form-data" name="EmailForm">
+                <form onsubmit="return verifFormulaire();" class="form-group main-contact-form col-md-12" action="mailto:morad.ichchou@gmail.com?subject=Demande écusson" method="POST" enctype="multipart/form-data" name="EmailForm">
                     <div class="row">
                     <!-- Colonne du formulaire concernant les informations du client -->
                     <div class="col-md-6 col-md-offset-1">
@@ -68,12 +71,11 @@
                         </div>
                         <div class="row vertical-center-label">
                             <label class=" col-md-5" for="typeFil">Type de fil </label>
-                            <input class="form-control col-md-5" list="typeFil" id="typeFilChoix" name="typeFilChoix">
-                            <datalist id="typeFil">
-                                <option value="Type 1">
-                                <option value="Type 2">
-                                <option value="Type 3">
-                            </datalist>
+                            <select class="form-control col-md-5" id="typeFil" name="typeFil">
+                                <option></option>
+                                <option value="filMetallique">Fil métallique</option>
+                                <option value="filTissus">Fil tissus</option>
+                            </select>
                         </div>
                         <div class="row vertical-center-label">
                             <label class=" col-md-5" for="descEcusson">Description de l'écusson : </label>
@@ -81,16 +83,15 @@
                         </div>
                         <div class="row vertical-center-label">
                             <label class=" col-md-5" for="imgEcusson">Image de l'écusson (.png/.jpeg)</label>
-                            <input type="file" id="imgEcusson" name="imgEcusson" accept="image/png, image/jpeg">
+                            <input type="file" id="imgEcusson" accept="image/png, image/jpeg" onchange="encodeImageFileAsURL(this)">
+                            <input type="hidden" id="imgEcussonEnBase64" name="imgEcussonEnBase64" value="" alt="">
                         </div>
                         <div class="text-center">
                             <input class="col-md-5 btn btn-primary" type="submit" value="Envoyer">
                         </div>  
                     </div>      
                     </div>
-                </form> 
-                
-                                    
+                </form>                    
             </div>
         </div>
     </section>     
