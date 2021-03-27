@@ -51,11 +51,7 @@
                         <div class="row vertical-center-label">
                             <label class="col-md-5" for="numTel">Numéro de téléphone </label>
                             <input class="form-control col-md-5" type="text" name="numTel" id="numTel" placeholder="Ex: 0123456789">
-                        </div>
-                        <div class="spacer-224"></div>
-                        <div class="text-center">
-                            <input class="col-md-5 btn btn-primary" type="reset" value="Annuler">
-                        </div>
+                        </div>                
                     </div>
                     
                     <!-- Colonne du formulaire concernant les détails du projset -->
@@ -86,10 +82,22 @@
                             <input type="file" id="imgEcusson" accept="image/png, image/jpeg" onchange="encodeImageFileAsURL(this)">
                             <input type="hidden" id="imgEcussonEnBase64" name="imgEcussonEnBase64" value="" alt="">
                         </div>
-                        <div class="text-center">
-                            <input class="col-md-5 btn btn-primary" type="submit" value="Envoyer">
-                        </div>  
+                         
                     </div>      
+                    </div>
+                    <div class="spacer-20"></div>
+                    <div class="row">
+                        <!-- Colonne du formulaire concernant les informations du client -->
+                        <div class="col-md-6 col-md-offset-1">
+                            <div class="text-center">
+                                <input class="col-md-5 btn btn-primary" type="reset" value="Annuler">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-center">
+                                <input class="col-md-5 btn btn-primary" type="submit" value="Envoyer">
+                            </div> 
+                        </div>
                     </div>
                 </form>                    
             </div>
