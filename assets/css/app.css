@@ -1,0 +1,226 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.title{
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.landing
+{
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+
+    color: #FFFFFF;
+    position: relative;
+}
+
+.separateur{
+    padding-top: 50px;
+}
+
+.formulaire{
+    background-color: #131313;
+}
+
+.medium{
+    max-width: 25%;
+    max-height: 25%;
+}
+
+.landing {
+    height: auto;
+    width: auto;
+    min-height: 920px;
+    min-width: 100%;
+
+    background-color: #131313;;
+
+}
+
+.landing > .catch {
+    height: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landing > .catch .hexagon {
+    position: relative;
+    width: 150px;
+    height: 86.60px;
+    margin: 43.30px 0 65px;
+    background-image: url(../img/profilepic.png);
+    background-size: auto 173.2051px;
+    background-position: center;
+}
+
+.landing > .catch .hexagon > .hexTop, .landing > .catch .hexagon > .hexBottom {
+    position: absolute;
+    z-index: 1;
+    width: 106.07px;
+    height: 106.07px;
+    overflow: hidden;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background: inherit;
+    left: 21.97px;
+}
+
+.landing > .catch .hexagon > .hexTop:after, .landing > .catch .hexagon > .hexBottom:after {
+    content: "";
+    position: absolute;
+    width: 150.0000px;
+    height: 86.60254037844388px;
+    -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
+    -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
+    transform:          rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    background: inherit;
+}
+
+.landing > .catch .hexagon > .hexTop {
+    top: -53.0330px;
+}
+
+.landing > .catch .hexagon > .hexTop:after {
+    background-position: center top;
+}
+
+.landing > .catch .hexagon > .hexBottom {
+    bottom: -53.0330px;
+}
+
+.landing > .catch .hexagon > .hexBottom:after {
+    background-position: center bottom;
+}
+
+.landing > .catch .hexagon:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 87px;
+    z-index: 2;
+    background: inherit;
+}
+
+.landing > .catch > .text {
+    text-align: center;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.landing > .catch > .text h1 {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.landing > .catch > .text span {
+    font-size: 2em;
+}
+.center-block {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.landing > .catch > .text {
+    text-align: center;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.landing > .catch > .text h1 {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.divider{
+    margin-top: 50%;
+}
+
+/*
+FORM
+ */
+
+.white{
+    color: #FFFFFF;
+}
+
+.vertical-center-label{
+    display: flex;
+    align-items: center;
+}
+
+.theme-accent-color {
+    color: #F22613 !important;
+}
+
+.section-heading {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 48px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.spacer-20{
+    clear: both;
+    height: 20px;
+    display: block;
+    position: relative;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+    display: block;
+}
+
+.mb80 {
+    margin-bottom: 80px;
+}
+
+.btn-primary {
+    border-color: #333;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #333;
+    background-color: transparent;
+    padding: 15px 20px;
+    letter-spacing: 1px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    border: 2px solid;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #F22613;
+    border-color: #F22613;
+}
+
+.form-control{
+    margin: 0 0.5% 10px;
+}
+
+.section-heading h2 {
+    font-family: 'Bree Serif', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
