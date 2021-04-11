@@ -164,11 +164,8 @@ FORM
     font-weight: 700;
 }
 
-.spacer-20{
-    clear: both;
-    height: 20px;
-    display: block;
-    position: relative;
+.spacer-top50{
+    margin-top: 50px;
 }
 
 .mb40 {
@@ -216,7 +213,7 @@ FORM
 }
 
 .section-inner{
-    padding: 100px 0;
+    padding-top: 100px;
     min-height: 100vh;
 }
 

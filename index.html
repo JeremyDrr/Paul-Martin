@@ -13,12 +13,13 @@
     <!-- Feuille CSS personnalisée -->
     <link rel="stylesheet" href="assets/css/app.css">
 
-    <!-- Feuille JS personnalisée -->
+    <!-- Feuille JS personnalisée pour le formulaire -->
     <script type="text/javascript" src="assets/js/customJS.js"></script>
+
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark navbar-fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
     <a class="navbar-brand" href="#">
         <img src="assets/img/logo.png" width="50" height="50" class="d-inline-block align-top" alt="">
     </a>
@@ -40,30 +41,25 @@
 </nav>
 
 <section id="home" class="landing">
-   
-        <div class="container catch">
-            <div class="center-block">
-                <div class="hexagon">
-                    <div class="hexTop"></div>
-                    <div class="hexBottom"></div>
-                </div>
+    <div class="container catch">
+        <div class="center-block">
+            <div class="hexagon">
+                <div class="hexTop"></div>
+                <div class="hexBottom"></div>
             </div>
-            <img src="assets/img/logo.png" class="mx-auto d-block vert-center medium" draggable="false" alt="Logo de Paul & Martin">
-            <div class="text">
-                <h1 id="subtitle"></h1>
-            </div>
-    
         </div>
-
-    
+        <img src="assets/img/logo.png" class="mx-auto d-block medium" draggable="false" alt="Logo de Paul & Martin">
+        <div class="text">
+            <h1 id="subtitle"></h1>
+        </div> 
+    </div>   
 </section>
 
 <section class="container" id="a-propos">
     <div class="section-inner">
         <div class="container">
             <h1 class="text-center">A propos</h1>
-            <div class="row">
-        
+            <div class="row">  
                 <div class="col-6 text-center">
                     <h3 class="font-italic my-5">Notre histoire...</h3>
                     <p>
@@ -79,7 +75,6 @@
                         N'ayez pas peur de décrire exactement ce que vous voulez, notre graphiste saura donner forme à vos désirs, et ce en tenant compte de votre avis tout au long du processus.
                     </p>
                 </div>
-    
                 <div class="col-6 text-center">
                     <h3 class="font-italic my-5">Nos clients</h3>
                     <div id="carouselExampleIndicators" class="carousel slide medium mx-auto" data-ride="carousel">
@@ -108,112 +103,108 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
-                </div>
-          
+                </div>      
             </div>
         </div>
     </div>
-    
 </section>
-    <section id="formulaire" class="formulaire">
-        <div class="section-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center mb80">
-                        <h2 class="section-heading white"><span class="theme-accent-color">Formulaire</span> de demande</h2>
-                    </div>
+
+<section id="formulaire" class="formulaire">
+    <div class="section-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb80">
+                    <h2 class="section-heading white"><span class="theme-accent-color">Formulaire</span> de demande</h2>
                 </div>
             </div>
-            <div class="container formulaire">
-                <form onsubmit="return verifFormulaire();" class="form-group main-contact-form col-md-12" action="mailto:morad.ichchou@gmail.com?subject=Demande écusson" method="POST" enctype="text/plain" name="EmailForm">
-                    <div class="row">
-                        <!-- Colonne du formulaire concernant les informations du client -->
-                        <div class="col-md-6 col-md-offset-1">
-                            <h2 class="mb40 text-center white">Informations <span class="theme-accent-color">client</span></h2>
-                            <div class="row vertical-center-label">
-                                <label class=" col-md-5 white" for="nom">Nom (*) </label>
-                                <input class="form-control col-md-5" type="text" name="nom" id="nom" placeholder="Entrer votre nom" required>
-                            </div>
-                            <div class="row vertical-center-label">
-                                <label class=" col-md-5 white" for="prenom">Prénom (*) </label>
-                                <input class="form-control col-md-5" type="text" name="prenom" id="prenom" placeholder="Entrer votre prénom" required>
-                            </div>
-                            <div class="row vertical-center-label">
-                                <label class=" col-md-5 white" for="entreprise">Entreprise (*) </label>
-                                <input class="form-control col-md-5" type="text" name="entreprise" id="entreprise" placeholder="Entrer votre nom d'entreprise" required>
-                            </div>
-                            <div class="row vertical-center-label">
-                                <label class="col-md-5 white" for="mail">Adresse Email (*) </label>
-                                <input class="form-control col-md-5" type="email" name="mail" id="mail" placeholder="Ex: prenom.nom@fai.com" required>
-                            </div>
-                            <div class="row vertical-center-label">
-                                <label class="col-md-5 white" for="numTel">Numéro de téléphone </label>
-                                <input class="form-control col-md-5" type="text" name="numTel" id="numTel" placeholder="Ex: 0123456789">
-                            </div>
-                        </div>
-
-                        <!-- Colonne du formulaire concernant les détails du projset -->
-                        <div class="col-md-6">
-                            <h2 class="mb40 text-center white">Détails <span class="theme-accent-color">projet</span></h2>
-                            <div class="row vertical-center-label">
-                                <label class="col-md-5 white" for="dimensions">Dimensions (*) </label>
-                                <input class="form-control col-md-5" type="text" name="dimensions" id="dimensions" placeholder="Ex: longeur x largeur en cm" required>
-                            </div>
-                            <div class="row vertical-center-label">
-                                <label class=" col-md-5 white" for="nbEcussons">Nombre d'écussons (*) </label>
-                                <input class="form-control col-md-5" type="number" name="nbEcussons" min="1" id="nbEcussons" placeholder="Ex: 2" required >
-                            </div>
-                            <div class="row vertical-center-label">
-                                <label class=" col-md-5 white" for="typeFil">Type de fil </label>
-                                <select class="form-control col-md-5" id="typeFil" name="typeFil">
-                                    <option></option>
-                                    <option value="filMetallique">Fil métallique</option>
-                                    <option value="filTissus">Fil tissus</option>
-                                </select>
-                            </div>
-                            <div class="row vertical-center-label">
-                                <label class=" col-md-5 white" for="descEcusson">Description de l'écusson : </label>
-                                <textarea class="form-control col-md-5" name="descEcusson" id="descEcusson" cols="30" rows="10" placeholder="Veuillez écrire votre description ici"></textarea>
-                            </div>
-                            <div class="row vertical-center-label">
-                                <label class=" col-md-5 white" for="imgEcusson">Image de l'écusson (.png/.jpeg)</label>
-                                <input type="file" id="imgEcusson" accept="image/png, image/jpeg" onchange="transformeImgEnBase64(this)">
-                                <input type="hidden" id="imgEcussonEnBase64" name="imgEcussonEnBase64" value="" alt="">
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="spacer-20"></div>
-                    <div class="row my-2">
-                        <!-- Colonne du formulaire concernant les informations du client -->
-                        <div class="col-md-6 col-md-offset-1">
-                            <div class="text-center">
-                                <input class="col-md-5 btn btn-primary white" type="reset" value="Annuler">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="text-center">
-                                <input class="col-md-5 btn btn-primary" type="submit" value="Envoyer">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
         </div>
-    </section>
+        <div class="container formulaire">
+            <form onsubmit="return verifFormulaire();" class="col-md-12" action="mailto:contact@pauletmartin.com?subject=Demande écusson" method="POST" enctype="text/plain" name="EmailForm">
+                <div class="row">
+                    <!-- Colonne du formulaire concernant les informations du client -->
+                    <div class="col-md-6">
+                        <h2 class="mb40 text-center white">Informations <span class="theme-accent-color">client</span></h2>
+                        <div class="row vertical-center-label">
+                            <label class=" col-md-5 white" for="nom">Nom (*) </label>
+                            <input class="form-control col-md-5" type="text" name="nom" id="nom" placeholder="Entrer votre nom" required>
+                        </div>
+                        <div class="row vertical-center-label">
+                            <label class=" col-md-5 white" for="prenom">Prénom (*) </label>
+                            <input class="form-control col-md-5" type="text" name="prenom" id="prenom" placeholder="Entrer votre prénom" required>
+                        </div>
+                        <div class="row vertical-center-label">
+                            <label class=" col-md-5 white" for="entreprise">Entreprise (*) </label>
+                            <input class="form-control col-md-5" type="text" name="entreprise" id="entreprise" placeholder="Entrer votre nom d'entreprise" required>
+                        </div>
+                        <div class="row vertical-center-label">
+                            <label class="col-md-5 white" for="mail">Adresse Email (*) </label>
+                            <input class="form-control col-md-5" type="email" name="mail" id="mail" placeholder="Ex: prenom.nom@fai.com" required>
+                        </div>
+                        <div class="row vertical-center-label">
+                            <label class="col-md-5 white" for="numTel">Numéro de téléphone </label>
+                            <input class="form-control col-md-5" type="text" name="numTel" id="numTel" placeholder="Ex: 0123456789">
+                        </div>
+                    </div>
+                    
+                    <!-- Colonne du formulaire concernant les détails du projset -->
+                    <div class="col-md-6">
+                        <h2 class="mb40 text-center white">Détails <span class="theme-accent-color">projet</span></h2>
+                        <div class="row vertical-center-label">
+                            <label class="col-md-5 white" for="dimensions">Dimensions (*) </label>
+                            <input class="form-control col-md-5" type="text" name="dimensions" id="dimensions" placeholder="Ex: longeur x largeur en cm" required>
+                        </div>
+                        <div class="row vertical-center-label">
+                            <label class=" col-md-5 white" for="nbEcussons">Nombre d'écussons (*) </label>
+                            <input class="form-control col-md-5" type="number" name="nbEcussons" min="1" id="nbEcussons" placeholder="Ex: 2" required >
+                        </div>
+                        <div class="row vertical-center-label">
+                            <label class=" col-md-5 white" for="typeFil">Type de fil </label>
+                            <select class="form-control col-md-5" id="typeFil" name="typeFil">
+                                <option></option>
+                                <option value="filMetallique">Fil métallique</option>
+                                <option value="filTissus">Fil tissus</option>
+                            </select>
+                        </div>
+                        <div class="row vertical-center-label">
+                            <label class=" col-md-5 white" for="descEcusson">Description de l'écusson : </label>
+                            <textarea class="form-control col-md-5" name="descEcusson" id="descEcusson" cols="30" rows="10" placeholder="Veuillez écrire votre description ici"></textarea>
+                        </div>
+                        <div class="row vertical-center-label">
+                            <label class=" col-md-5 white" for="imgEcusson">Image de l'écusson (.png/.jpeg)</label>
+                            <input type="file" id="imgEcusson" accept="image/png, image/jpeg" onchange="transformeImgEnBase64(this)">
+                            <input type="hidden" id="imgEcussonEnBase64" name="imgEcussonEnBase64" value="" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="row ">
+                    <!-- Colonne du formulaire concernant les informations du client -->
+                    <div class="col-md-6 spacer-top50">
+                        <div class="text-center">
+                            <input class="col-md-5 btn btn-primary white" type="reset" value="Annuler">
+                        </div>
+                    </div>
+                    <div class="col-md-6 spacer-top50">
+                        <div class="text-center">
+                            <input class="col-md-5 btn btn-primary" type="submit" value="Envoyer">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
 
 
-<div id="footer">
+<footer>
     <div class="col-6 center-block">
         <p class="text-center text-footer">&copy; Paul & Martin 2021</p>
     </div>   
-</div>
+</footer>
 
+<!-- Feuille JS pour l'animation de texte  -->
+<script  src="assets/js/app.js"></script>
 
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/bundle.min.js"></script>
-<script src="assets/js/app.js"></script>
 </body>
 </html>
