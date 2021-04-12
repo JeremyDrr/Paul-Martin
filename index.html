@@ -31,7 +31,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#a-propos">A propos</a>
+                <a class="nav-link" href="#a-propos">À propos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#formulaire">Formulaire</a>
@@ -58,10 +58,16 @@
 <section class="container" id="a-propos">
     <div class="section-inner">
         <div class="container">
-            <h1 class="text-center">A propos</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb80">
+                        <h2 class="section-heading">À <span class="theme-accent-color">propos</span></h2>
+                    </div>
+                </div>
+            </div>
             <div class="row">  
                 <div class="col-6 text-center">
-                    <h3 class="font-italic my-5">Notre histoire...</h3>
+                    <h3 class="font-italic my-5">Notre <span class="theme-accent-color">histoire</span></h3>
                     <p>
                         Choisir un écusson brodé, apprécier le contraste et la brillance des couleurs, la finesse du rendu, la mise en valeur des détails, préférer un univers authentique.
                         Expérience, savoir-faire, réactivité : nous fabriquons des écussons sur mesure de grande qualité dans des délais courts, de 10 à 15 jours calendaires.
@@ -76,7 +82,7 @@
                     </p>
                 </div>
                 <div class="col-6 text-center">
-                    <h3 class="font-italic my-5">Nos clients</h3>
+                    <h3 class="font-italic my-5">Nos <span class="theme-accent-color">clients</span></h3>
                     <div id="carouselExampleIndicators" class="carousel slide medium mx-auto" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -170,7 +176,7 @@
                             <textarea class="form-control col-md-5" name="descEcusson" id="descEcusson" cols="30" rows="10" placeholder="Veuillez écrire votre description ici"></textarea>
                         </div>
                         <div class="row vertical-center-label">
-                            <label class=" col-md-5 white" for="imgEcusson">Image de l'écusson (.png/.jpeg)</label>
+                            <label class=" col-md-5 white" for="imgEcusson">Image de l'écusson (<br>.png ou .jpeg <br>Environ 1 ko au maximum)</label>
                             <input type="file" id="imgEcusson" accept="image/png, image/jpeg" onchange="transformeImgEnBase64(this)">
                             <input type="hidden" id="imgEcussonEnBase64" name="imgEcussonEnBase64" value="" alt="">
                         </div>
